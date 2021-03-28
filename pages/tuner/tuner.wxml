@@ -1,0 +1,5 @@
+<!--pages/tuner/tuner.wxml-->
+
+<view class="page-wrapper">
+  <view>tuner</view>
+</view>

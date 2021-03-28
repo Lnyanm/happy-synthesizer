@@ -1,0 +1,15 @@
+/* pages/tuner/tuner.wxss */
+
+page {
+  height: 100%;
+}
+
+.page-wrapper {
+  color: #333;
+  height: 100%;
+  padding-bottom: 150px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

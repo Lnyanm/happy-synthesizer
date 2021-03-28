@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/metronome/metronome",
+    "pages/tuner/tuner"
+  ],
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#333",
+    "selectedColor": "#51a938",
+    "list": [
+      {
+        "pagePath": "pages/metronome/metronome",
+        "text": "节拍器",
+        "iconPath": "assets/icon/metronome.png",
+        "selectedIconPath": "assets/icon/metronome--active.png"
+      },
+      {
+        "pagePath": "pages/tuner/tuner",
+        "text": "调音器",
+        "iconPath": "assets/icon/tuner.png",
+        "selectedIconPath": "assets/icon/tuner--active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "HAPPY SYNTHESIZER",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

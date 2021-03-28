@@ -1,0 +1,32 @@
+<!--pages/metronome/metronome.wxml-->
+<view class="page-wrapper">
+  <view class="number-indicator-wrapper">
+    <view class="number-indicator">
+      <view wx:if="{{ running }}" class="{{ counter === 0 ? 'number-indicator--initial--actived' : '' }}">
+        {{ counter + 1 }}</view>
+      <view wx:else>--</view>
+    </view>
+  </view>
+  <view class="dots-wrapper">
+    <view wx:if="{{ round > 1 }}" class="dot {{ running && counter === 0 ? 'dot--initial--actived' : '' }}"></view>
+    <view wx:for="{{ dots.createDots(round) }}" wx:key="item"
+      class="dot {{ running && counter === item ? 'dot--simple--actived' : '' }}"></view>
+  </view>
+  <view class="slider-wrapper">
+    <slider model:value="{{ bpm }}" bindchange="handleBPMChange" min="{{ bpmLimit.min }}" max="{{ bpmLimit.max }}">
+    </slider>
+  </view>
+  <view class="bpm-wrapper">
+    <text class="bpm-text">{{ bpm }} BPM</text>
+  </view>
+  <button bindtap="handleClickStartButton">
+    <text wx:if="{{ running }}">暂停</text>
+    <text wx:else>开始</text>
+  </button>
+</view>
+
+<wxs module="dots">
+  function createDots(length) {
+    var array = [];
+    for (var i = 0; i < length - 1; i++) { array[i] = i + 1; } return array;
+  } module.exports.createDots = createDots; </wxs>
